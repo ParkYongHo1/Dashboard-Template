@@ -1,8 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ReactNode } from "react";
-import HomePage from "./pages/HomePage";
-import Header from "./widgets/header/ui/Header";
-import Footer from "./widgets/footer/ui/Footer";
+import Footer from "@widgets/footer/ui/Footer.tsx";
+import HomePage from "@pages/HomePage.tsx";
+import Header from "@widgets/header/ui/Header.tsx";
+import Dashboard from "@pages/dashboard/ui/Dashboard";
 
 interface LayoutWrapperProps {
   children: ReactNode;
@@ -14,6 +15,11 @@ function App() {
       <LayoutWrapper>
         <Routes>
           <Route path="/" element={<HomePage />} />
+          <Route path="/add-dashboard" element={<Dashboard mode="add" />} />
+          <Route
+            path="/edit-dashboard/:id"
+            element={<Dashboard mode="edit" />}
+          />
         </Routes>
       </LayoutWrapper>
     </Router>
