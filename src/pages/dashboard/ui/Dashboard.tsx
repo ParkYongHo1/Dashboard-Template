@@ -1,5 +1,5 @@
 import { DashboardFormProps } from '@entities/dashboard/model';
-import DashboardForm from "@widgets/dashboard/ui/DashboardForm";
+import DashboardForm from "@features/dashboard/ui/DashboardForm";
 
 
 
