@@ -1,8 +1,10 @@
 import { LinkButton } from "@shared/ui/LinkButton";
 import edit from "@assets/home/edit.svg";
+import init from "@assets/stats/init.svg";
+import { DashboardTableProps } from "@entities/dashboard/model";
 
-const DashboardTableItem = () => {
-  const PATH = `/edit-dashboard/`;
+const DashboardTableItem = ({ mode }: DashboardTableProps) => {
+  const PATH = mode === "home" ? `/edit-dashboard/` : `/stats/`;
 
   return (
     <tr>
@@ -18,11 +20,12 @@ const DashboardTableItem = () => {
       <td className="border border-gray-300 px-4 py-4 font-bold text-gray-600 text-center">
         <span className={`text-red-500`}>CREATED</span>
       </td>
+
       <td className="border border-gray-300 px-4 py-4 font-bold text-gray-600 text-center">
         <LinkButton path={PATH} type="icon">
           <img
-            src={edit}
-            alt="수정 아이콘"
+            src={mode === "home" ? edit : init}
+            alt={mode === "home" ? "수정 아이콘" : "입장 아이콘"}
             className="cursor-pointer w-[30px] h-[30px]"
           />
         </LinkButton>

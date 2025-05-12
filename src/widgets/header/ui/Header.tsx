@@ -17,10 +17,10 @@ const Header = () => {
               isActive={currentPath === "/"}
             />
             <LinkButton
-              name="DASHBOARD"
-              path="/dashboard"
+              name="STATS"
+              path="/stats"
               type="default"
-              isActive={currentPath === "/dashboard"}
+              isActive={currentPath === "/stats"}
             />
           </div>
         </div>

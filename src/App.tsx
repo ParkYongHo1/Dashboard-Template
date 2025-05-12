@@ -4,6 +4,7 @@ import Footer from "@widgets/footer/ui/Footer.tsx";
 import HomePage from "@pages/HomePage.tsx";
 import Header from "@widgets/header/ui/Header.tsx";
 import Dashboard from "@pages/dashboard/ui/Dashboard";
+import StatsListPage from "@pages/stats/ui/StatsListPage";
 
 interface LayoutWrapperProps {
   children: ReactNode;
@@ -20,6 +21,7 @@ function App() {
             path="/edit-dashboard/:id"
             element={<Dashboard mode="edit" />}
           />
+          <Route path="/stats" element={<StatsListPage />} />
         </Routes>
       </LayoutWrapper>
     </Router>

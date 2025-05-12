@@ -14,7 +14,7 @@ const DashboardToolTipAction = ({
   return (
     <>
       <div
-        className="flex items-center justify-center"
+        className="flex items-center justify-center border-none"
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
       >

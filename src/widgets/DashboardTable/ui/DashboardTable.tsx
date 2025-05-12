@@ -1,7 +1,9 @@
 import { useState } from "react";
 import DashboardTableItem from "./DashboardTableItem";
 import DashboardTableHeader from "./DashboardTableHeader";
-const DashboardTable = () => {
+import { DashboardTableProps } from "@entities/dashboard/model";
+
+const DashboardTable = ({ mode }: DashboardTableProps) => {
   const [toolTipVisible, setToolTipVisible] = useState(false);
   return (
     <table className="w-full border-collapse table-auto">
@@ -9,10 +11,11 @@ const DashboardTable = () => {
         <DashboardTableHeader
           setToolTipVisible={setToolTipVisible}
           toolTipVisible={toolTipVisible}
+          mode={mode}
         />
       </thead>
-      <tbody>
-        <DashboardTableItem />
+      <tbody> 
+        <DashboardTableItem mode={mode} />
       </tbody>
     </table>
   );

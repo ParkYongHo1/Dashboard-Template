@@ -7,7 +7,7 @@ const HomePage = () => {
       <div className="min-h-[85vh]">
         <Title name="HOME" />
         <div className="p-6">
-          <DashboardTable />
+          <DashboardTable mode="home" />
         </div>
       </div>
     </>
