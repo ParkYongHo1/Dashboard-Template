@@ -4,7 +4,7 @@ import init from "@assets/stats/init.svg";
 import { DashboardTableProps } from "@entities/dashboard/model";
 
 const DashboardTableItem = ({ mode }: DashboardTableProps) => {
-  const PATH = mode === "home" ? `/edit-dashboard/` : `/stats/`;
+  const PATH = mode === "home" ? `/edit-dashboard/` : `/stats/1`;
 
   return (
     <tr>
