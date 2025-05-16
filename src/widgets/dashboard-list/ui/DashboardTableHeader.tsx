@@ -1,5 +1,5 @@
-import { DashboardToolTipActionProps } from "@entities/dashboard/model";
-import DashboardToolTipAction from "@features/dashboard/ui/DashboardToolTipAction";
+import { DashboardToolTipActionProps } from "@entities/dashboard/dashboard-list/model";
+import DashboardToolTipAction from "@features/dashboard/dashboard-list/ui/DashboardToolTipAction";
 
 const DashboardTableHeader = ({
   setToolTipVisible,

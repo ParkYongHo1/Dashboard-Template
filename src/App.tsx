@@ -3,7 +3,7 @@ import { ReactNode } from "react";
 import Footer from "@widgets/footer/ui/Footer.tsx";
 import HomePage from "@pages/HomePage.tsx";
 import Header from "@widgets/header/ui/Header.tsx";
-import Dashboard from "@pages/dashboard/ui/DashboardPage";
+import DashboardInfoPage from "@pages/dashboard/ui/DashboardInfoPage";
 import StatsListPage from "@pages/stats/ui/StatsListPage";
 import StatsItemPage from "@pages/stats/ui/StatsItemPage";
 
@@ -17,10 +17,13 @@ function App() {
       <LayoutWrapper>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/add-dashboard" element={<Dashboard mode="add" />} />
+          <Route
+            path="/add-dashboard"
+            element={<DashboardInfoPage mode="add" />}
+          />
           <Route
             path="/edit-dashboard/:id"
-            element={<Dashboard mode="edit" />}
+            element={<DashboardInfoPage mode="edit" />}
           />
           <Route path="/stats" element={<StatsListPage />} />
           <Route path="/stats/:id" element={<StatsItemPage />} />

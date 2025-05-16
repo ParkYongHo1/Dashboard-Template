@@ -1,5 +1,5 @@
 import { Title } from "@shared/ui/Title";
-import DashboardTable from "@widgets/DashboardTable/ui/DashboardTable";
+import DashboardTable from "@widgets/dashboard-list/ui/DashboardTable";
 
 const StatsListPage = () => {
   return (

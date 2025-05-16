@@ -20,7 +20,7 @@ const Header = () => {
               name="STATS"
               path="/stats"
               type="default"
-              isActive={currentPath === "/stats"}
+              isActive={currentPath.startsWith("/stats")}
             />
           </div>
         </div>

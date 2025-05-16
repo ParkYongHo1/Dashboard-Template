@@ -1,6 +1,6 @@
-import { DashboardInfoTitleProps } from "@entities/dashboard/model";
+import { IsEditProps } from "@entities/dashboard/dashboard-info/model";
 
-const DashboardInfoTitle = ({ isEdit }: DashboardInfoTitleProps) => {
+const DashboardInfoTitle = ({ isEdit }: IsEditProps) => {
   return (
     <div className="flex items-center gap-[10px]">
       <p>기본정보 </p>

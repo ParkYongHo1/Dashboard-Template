@@ -7,7 +7,6 @@ import { LineChartComponent } from "./LineChart";
 import { AreaChartComponent } from "./AreaChart";
 
 const Chart = ({
-  title = "데이터 차트",
   data = sampleData,
   chartType = "donut",
   height = 400,
@@ -29,10 +28,7 @@ const Chart = ({
 
   return (
     <div className="bg-white p-6 rounded-xl ">
-      <div className="flex justify-between items-center mb-6">
-        <h3 className="text-lg font-semibold text-gray-700">{title}</h3>
-      </div>
-      <div style={{ height: `${height}px` }}>{renderChart()}</div>
+      <div className={`h-[${height}px]`}>{renderChart()}</div>
     </div>
   );
 };

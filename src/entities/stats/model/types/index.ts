@@ -33,7 +33,6 @@ export type ChartCustomTooltipProps = TooltipProps<number, string> & {
 export type ChartType = "donut" | "bar" | "line" | "area";
 
 export interface ChartProps {
-  title?: string;
   data?: ChartDataItem[];
   chartType?: ChartType;
   width?: string | number;

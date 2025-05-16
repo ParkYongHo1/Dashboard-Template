@@ -1,5 +1,5 @@
 import info from "@assets/home/help.svg";
-import { DashboardToolTipProps } from "@entities/dashboard/model";
+import { DashboardToolTipProps } from "@entities/dashboard/dashboard-list/model";
 const DashboardToolTip = ({ toolTipVisible }: DashboardToolTipProps) => {
   return (
     <>

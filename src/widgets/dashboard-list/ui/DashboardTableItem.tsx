@@ -1,7 +1,7 @@
 import { LinkButton } from "@shared/ui/LinkButton";
 import edit from "@assets/home/edit.svg";
 import init from "@assets/stats/init.svg";
-import { DashboardTableProps } from "@entities/dashboard/model";
+import { DashboardTableProps } from "@entities/dashboard/dashboard-list/model";
 
 const DashboardTableItem = ({ mode }: DashboardTableProps) => {
   const PATH = mode === "home" ? `/edit-dashboard/` : `/stats/1`;

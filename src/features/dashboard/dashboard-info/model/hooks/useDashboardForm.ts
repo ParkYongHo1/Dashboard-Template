@@ -1,4 +1,4 @@
-import { dashboardApi } from "@entities/dashboard/apis";
+import { dashboardApi } from "@entities/dashboard/dashboard-info/apis";
 import { useQuery } from "@tanstack/react-query";
 
 const DEV_MODE = process.env.NODE_ENV === "development";
@@ -6,7 +6,7 @@ const DEV_DELAY = 1000;
 
 export const useDashboardForm = (
   mode: "add" | "edit",
-  dashboardId?: number
+  dashboardId?: string
 ) => {
   const isEdit = mode === "edit";
 
@@ -25,7 +25,9 @@ export const useDashboardForm = (
         await new Promise((resolve) => setTimeout(resolve, DEV_DELAY));
       }
 
-      return dashboardId ? dashboardApi.getDashboardData(dashboardId) : null;
+      return dashboardId
+        ? dashboardApi.getDashboardData(dashboardId)
+        : undefined;
     },
     enabled: isEdit && !!dashboardId,
   });

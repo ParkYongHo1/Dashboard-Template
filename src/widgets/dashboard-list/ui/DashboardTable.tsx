@@ -1,7 +1,7 @@
 import { useState } from "react";
 import DashboardTableItem from "./DashboardTableItem";
 import DashboardTableHeader from "./DashboardTableHeader";
-import { DashboardTableProps } from "@entities/dashboard/model";
+import { DashboardTableProps } from "@entities/dashboard/dashboard-list/model";
 
 const DashboardTable = ({ mode }: DashboardTableProps) => {
   const [toolTipVisible, setToolTipVisible] = useState(false);
@@ -14,7 +14,7 @@ const DashboardTable = ({ mode }: DashboardTableProps) => {
           mode={mode}
         />
       </thead>
-      <tbody> 
+      <tbody>
         <DashboardTableItem mode={mode} />
       </tbody>
     </table>
